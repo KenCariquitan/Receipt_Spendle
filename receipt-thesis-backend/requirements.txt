@@ -1,0 +1,25 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+pandas
+scikit-learn
+joblib
+pytesseract
+opencv-python-headless
+Pillow
+streamlit
+tqdm
+python-Levenshtein
+python-dateutil
+ultralytics
+SQLAlchemy
+python-dotenv
+httpx
+psycopg2-binary
+python-jose[cryptography]
+google-cloud-vision
+# PaddleOCR-VL 
+# paddlepaddle-gpu==3.2.0  # Uncomment and use only if you have Python <=3.10 and a compatible GPU
+paddlepaddle  # CPU version for Python 3.11+
+paddleocr[doc-parser]

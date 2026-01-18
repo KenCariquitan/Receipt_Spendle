@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# IDE/editor stuff
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables - IMPORTANT: never commit secrets!
+.env
+.env.local
+.env.*.local
+
+# Data & outputs (don't version control raw or generated data)
+data/raw_images/
+data/ocr_raw.csv
+data/parsed_fields.csv
+data/labels.csv
+data/dataset.csv
+data/feedback.csv
+data/receipts.db
+data/*.db
+
+# Training outputs
+runs/
+checkpoints/
+
+# Logs
+*.log
+logs/
+
+# Streamlit & cache
+.streamlit/
+
+# GCV / credentials - IMPORTANT: never commit credentials!
+credentials/
+creds/
+*.json
+!yolo_data/data.yaml
+
+# Model files (large binary files - uncomment if you don't want to track them)
+# *.pt
+# *.onnx
+# *.pkl
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.manifest
+*.spec

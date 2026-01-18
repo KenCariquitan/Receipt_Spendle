@@ -1,0 +1,164 @@
+# Unified root .gitignore
+# Merged from backend and frontend .gitignore files, scoped to their subfolders.
+
+# -----------------------------
+# OS/editor files (root-wide)
+# -----------------------------
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# -----------------------------
+# Environment files (root-wide)
+# -----------------------------
+.env
+.env.local
+.env.*.local
+*.env
+
+# -----------------------------
+# Python virtual environments
+# -----------------------------
+# Root venv (if you create one at repo root)
+.venv/
+# Backend venvs
+receipt-thesis-backend/.venv/
+receipt-thesis-backend/venv/
+receipt-thesis-backend/env/
+receipt-thesis-backend/ENV/
+
+# =============================
+# Backend: receipt-thesis-backend
+# =============================
+
+# Python caches and artifacts
+receipt-thesis-backend/**/__pycache__/
+receipt-thesis-backend/**/*.py[cod]
+receipt-thesis-backend/**/*.so
+receipt-thesis-backend/**/*.egg
+receipt-thesis-backend/**/*.egg-info/
+receipt-thesis-backend/.eggs/
+
+# Editor folders inside backend (redundant with root, safe)
+receipt-thesis-backend/.vscode/
+receipt-thesis-backend/.idea/
+
+# OS files inside backend (redundant with root, safe)
+receipt-thesis-backend/.DS_Store
+receipt-thesis-backend/Thumbs.db
+receipt-thesis-backend/desktop.ini
+
+# Data & outputs
+receipt-thesis-backend/data/raw_images/
+receipt-thesis-backend/data/ocr_raw.csv
+receipt-thesis-backend/data/parsed_fields.csv
+receipt-thesis-backend/data/labels.csv
+receipt-thesis-backend/data/dataset.csv
+receipt-thesis-backend/data/feedback.csv
+receipt-thesis-backend/data/receipts.db
+receipt-thesis-backend/data/*.db
+
+# Training datasets and outputs
+receipt-thesis-backend/yolo_data/train/
+receipt-thesis-backend/yolo_data/val/
+receipt-thesis-backend/runs/
+receipt-thesis-backend/checkpoints/
+# Keep dataset config if needed
+!receipt-thesis-backend/yolo_data/data.yaml
+
+# Logs
+receipt-thesis-backend/*.log
+receipt-thesis-backend/logs/
+
+# Streamlit cache
+receipt-thesis-backend/.streamlit/
+
+# Credentials (scope to known credential dirs to avoid ignoring frontend JSON)
+receipt-thesis-backend/credentials/
+receipt-thesis-backend/creds/
+receipt-thesis-backend/credentials/*.json
+receipt-thesis-backend/creds/*.json
+
+# Also ignore backend-root weights like yolov8n.pt
+receipt-thesis-backend/*.pt
+
+# Jupyter Notebook
+receipt-thesis-backend/.ipynb_checkpoints/
+
+# pytest, coverage
+receipt-thesis-backend/.pytest_cache/
+receipt-thesis-backend/.coverage
+receipt-thesis-backend/htmlcov/
+
+# mypy
+receipt-thesis-backend/.mypy_cache/
+
+# Packaging
+receipt-thesis-backend/dist/
+receipt-thesis-backend/build/
+receipt-thesis-backend/*.manifest
+receipt-thesis-backend/*.spec
+
+# =============================
+# Frontend: receipt-thesis-frontend/receipt_mobile (Flutter)
+# =============================
+
+# Misc
+receipt-thesis-frontend/receipt_mobile/*.class
+receipt-thesis-frontend/receipt_mobile/*.log
+receipt-thesis-frontend/receipt_mobile/*.pyc
+receipt-thesis-frontend/receipt_mobile/*.swp
+receipt-thesis-frontend/receipt_mobile/.atom/
+receipt-thesis-frontend/receipt_mobile/.build/
+receipt-thesis-frontend/receipt_mobile/.buildlog/
+receipt-thesis-frontend/receipt_mobile/.history
+receipt-thesis-frontend/receipt_mobile/.svn/
+receipt-thesis-frontend/receipt_mobile/.swiftpm/
+receipt-thesis-frontend/receipt_mobile/migrate_working_dir/
+
+# IntelliJ/Android Studio project files
+receipt-thesis-frontend/receipt_mobile/*.iml
+receipt-thesis-frontend/receipt_mobile/*.ipr
+receipt-thesis-frontend/receipt_mobile/*.iws
+receipt-thesis-frontend/receipt_mobile/.idea/
+
+# VS Code (kept tracked at root if desired; ignore inside app)
+# receipt-thesis-frontend/receipt_mobile/.vscode/
+
+# Flutter/Dart/Pub related
+receipt-thesis-frontend/receipt_mobile/**/doc/api/
+receipt-thesis-frontend/receipt_mobile/**/ios/Flutter/.last_build_id
+receipt-thesis-frontend/receipt_mobile/.dart_tool/
+receipt-thesis-frontend/receipt_mobile/.flutter-plugins
+receipt-thesis-frontend/receipt_mobile/.flutter-plugins-dependencies
+receipt-thesis-frontend/receipt_mobile/.pub-cache/
+receipt-thesis-frontend/receipt_mobile/.pub/
+receipt-thesis-frontend/receipt_mobile/build/
+receipt-thesis-frontend/receipt_mobile/coverage/
+
+# Symbolication & obfuscation
+receipt-thesis-frontend/receipt_mobile/app.*.symbols
+receipt-thesis-frontend/receipt_mobile/app.*.map.json
+
+# Android Studio build artifacts
+receipt-thesis-frontend/receipt_mobile/android/.gradle/
+receipt-thesis-frontend/receipt_mobile/android/app/debug
+receipt-thesis-frontend/receipt_mobile/android/app/profile
+receipt-thesis-frontend/receipt_mobile/android/app/release
+
+# Generated Dart files
+receipt-thesis-frontend/receipt_mobile/**/*.g.dart
+receipt-thesis-frontend/receipt_mobile/**/*.freezed.dart
+receipt-thesis-frontend/receipt_mobile/**/*.mocks.dart
+
+# Local configuration (may contain API keys)
+receipt-thesis-frontend/receipt_mobile/lib/config.local.dart
+
+# OS files inside frontend (redundant with root, safe)
+receipt-thesis-frontend/receipt_mobile/Thumbs.db
+receipt-thesis-frontend/receipt_mobile/desktop.ini
+
+# Test coverage (frontend)
+receipt-thesis-frontend/receipt_mobile/coverage/
